@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    width: auto !important;
+    height: auto !important;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    row-gap: 4rem;
+    column-gap: 2rem;
+}
+
+a {
+    display: block;
+    background-color: #00feb7;
+    padding: .6rem .8rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    min-width: 80%;
+    max-height: fit-content;
+    color: black;
+    transition: .3s;
+}
+
+a:hover {
+    background-color: #1e745b;
+    color: white;
+}
+
+section.confirmar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: .8rem;
+    border-radius: 1rem;
+}
+
+section.confirmar span {
+    display: block;
+}
+
+section.confirmar.sucesso {
+    background-color: #70e89839;
+}
+
+section.confirmar.sucesso span {
+    color: #50C878;
+}
+
+section.confirmar.falha {
+    background-color: #e8708439;
+    
+}
+
+section.confirmar.falha span {
+    color: #d7252b;
+}

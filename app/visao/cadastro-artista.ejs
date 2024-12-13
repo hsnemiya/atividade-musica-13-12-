@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastro-principal.css">
+    <link rel="stylesheet" href="/css/cadastro-artista.css">
+    <script src="/js/cadastro-artista.js"></script>
+    <title>Cadastrar Artista</title>
+</head>
+<body>
+    <main>
+        <section class="cadastro">
+            <form action="/confirmar-cadastro-artista" enctype="multipart/form-data" method="POST">
+                <div class="painel-principal">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+        
+                    <label for="foto">Arquivo da Foto de Perfil:</label>
+                    <input type="file" id="foto" name="foto" accept=".png,.jpg,.webp" required>
+        
+                    <label for="pais">País de Origem:</label>
+                    <input type="text" id="pais" name="pais" required>
+        
+                    <label for="data_nasc">Data de nascimento:</label>
+                    <input type="date" name="data_nasc" id="data_nasc" required>
+                </div>
+                <div class="painel-foto">
+                    <label for="foto-preview">Preview da foto:</label>
+                    <img id="foto-preview" src="/img/placeholder.png" alt="">
+                </div>
+                <div class="painel-enviar">
+                    <a href="/">Página inicial</a>
+                    <button type="submit">Cadastrar Artista</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

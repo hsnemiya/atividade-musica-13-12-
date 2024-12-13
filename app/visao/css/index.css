@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Atkinson Hyperlegible Regular";
+    src: url("/fontes/AtkinsonHyperlegible-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible Bold";
+    src : url("/fontes/AtkinsonHyperlegible-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Fira Mono Bold";
+    src: url("/fontes/FiraMono-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Atkinson Hyperlegible Regular";
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+div.mobile-bar-fix {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(167deg, rgba(255, 182, 193, 1) 0%, rgba(255, 105, 180, 1) 50%, rgba(255, 20, 147, 1) 100%);
+    z-index: -1;
+}
+
+header {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+header h1 {
+    font-family: "Atkinson Hyperlegible Bold";
+    font-size: 2rem;
+    color: #d5006d;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-size: 1.2em;
+    transition: .3s;
+    color: white;
+    background-color: #d5006d;
+    border-radius: 2rem;
+}
+
+nav a:hover {
+    background-color: #ff4081;
+}
+
+main {
+    padding: 0 2rem;
+}
+
+section.player {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.section-h2 {
+    font-family: "Atkinson Hyperlegible Bold";
+    color: #d5006d;
+    margin-bottom: 1rem;
+}
+
+.select-albums, .select-musicas {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    width: 100%;
+    font-size: 1.1rem;
+    border: 1px solid #d5006d;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    padding: .5rem;
+    border: 1px solid #d5006d;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+    background-color: rgba(255, 182, 193, 0.2);
+}
+
+section.controles {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#player-de-musica {
+    width: 100%;
+}
+
+#seekbar {
+    width: 100%;
+    accent-color: #d5006d;
+}
+
+section.controles > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.controles > div > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#tempo-atual, #tempo-total {
+    font-family: "Fira Mono Bold";
+    color: #d5006d;
+}
+
+.player-control {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    transition: ease-in-out .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+}
+
+.player-control:hover {
+    background-color: rgba(255, 105, 180, 0.2);
+}
+
+.player-control .material-icons {
+    font-size: 2.5rem;
+    color: #d5006d;
+}
+
+#player-volume {
+    width: 100px;
+    accent-color: #d5006d;
+}
+
+#volume-icon .material-icons {
+    color: #d5006d;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#id_album {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    section.player {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        padding: 0;
+    }
+
+    section.player {
+        padding: 1rem;
+    }
+}
+
+#playback-speed {
+    font-family: "Fira Mono Bold";
+    font-size: 1.2rem;
+    color: #d5006d;
+    min-width: 3rem;
+    text-align: center;
+}
+
+.active-control {
+    background-color: rgba(255, 105, 180, 0.2) !important;
+}
+
+@media screen and (max-width: 600px) {
+    section.controles > div {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section.controles > div > div:nth-child(2) {
+        order: -1;
+    }
+}

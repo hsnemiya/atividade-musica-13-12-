@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    width: auto;
+    height: auto;
+}
+
+section.cadastro form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cadastro form div {
+    width: 100%;
+    height: 100%;
+}
+
+section.cadastro div.painel-enviar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.painel-foto label {
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+}
+
+img#foto-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: .6rem;
+    border: 2px solid black;
+}

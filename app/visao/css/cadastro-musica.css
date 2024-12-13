@@ -1,0 +1,79 @@
+select#artista option {
+    /* height: 2rem; */
+    /* min-height: 3rem; */
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right;
+    /* font-size: 1.5rem; */
+    /* display: flex; */
+    /* align-items: center; */
+    background-image: none !important;
+}
+
+/* select#artista option:nth-of-type(2n) {
+    background-color: #e1edf0;
+} */
+
+section.cadastro form {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section.cadastro form div {
+    width: 100%;
+    /* height: auto; */
+}
+
+/* section.cadastro div.painel-principal {
+    grid-row-start: 1;
+    grid-row-end: 3;
+} */
+
+section.cadastro div.painel-enviar {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.painel-foto {
+    text-align: left;
+}
+
+.painel-foto label {
+    display: block;
+    /* margin-right: 1rem; */
+    /* vertical-align: top; */
+}
+
+img#foto-preview {
+    width: 40%;
+    border-radius: .6rem;
+    border: 2px solid black;
+}
+
+.cadastro .painel-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    /* margin-top: 1rem; */
+}
+
+.cadastro .painel-enviar button {
+    width: auto;
+}
+
+.cadastro form span {
+    display: inline-block;
+    margin-bottom: .4rem;
+}
+
+audio {
+    width: calc(80% + .8rem);
+    background-color: #f1f3f4;
+    border-radius: none;
+    border-bottom: 2px solid #00c2ff;
+}
